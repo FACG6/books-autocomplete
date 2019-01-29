@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>books-autocomplete</title>
+        <title>book search</title>
+        <link href='font' rel='stylesheet' type='text/css'>
         <link href="./public/style.css" rel="stylesheet">
-     </head>
+    </head>
     <body>
         <header>
-            <h1 class="title">Books Autocomplete</h1>
+            <img class="main-logo" src="#">
+            <h1 class="title">Book Search</h1>
         </header>
         <main>
-            <div>
+            <div class="entry-container">
                 <form class="" action="/create-post" method="post" id="the-form">
-                    <textarea name="post" rows="1" cols="14"></textarea>
+                    <h2>Enter book name:</h2>
+                    <input type="text" name="book-search"></input>
                     <button type="submit">Search</button>
                 </form>
-            </div>
 
-            
+            <div class="book-div"></div>
         </main>
-        <script src="./public/logic.js" type="text/javascript"></script>
+        <script src="./src/server.js"></script>
     </body>
 </html>
+_
