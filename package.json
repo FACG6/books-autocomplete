@@ -1,0 +1,26 @@
+{
+  "name": "books-autocomplete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACG6/books-autocomplete.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACG6/books-autocomplete/issues"
+  },
+  "homepage": "https://github.com/FACG6/books-autocomplete#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
