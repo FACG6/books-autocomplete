@@ -36,7 +36,7 @@ show.addEventListener('click', (e) => {
             for(let i in response[0] ){
                 console.log(i,546546546);
             let li = document.createElement('li');
-            li.innerHTML = i + ':' + response[0][i];
+            li.innerHTML = i + ' : ' + response[0][i];
             console.log(li);
             unorderedList.appendChild(li);
             }
