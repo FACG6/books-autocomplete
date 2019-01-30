@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title> book search</title>
+        <!-- <link href='font' rel='stylesheet' type='text/css'> -->
+        <link href="../../public/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+        
+            <h1 class="title">Book Search</h1>
+        </header>
+        <main>
+            <div class="entry-container">
+                <form class="form" id="the-form">
+                    <h2 class="enterBook">Enter book name:</h2>
+                    <input autocomplete="off" type="text" name="book-search" id="bookSearch"  list="dataList" class="book-Search"></input>
+                    <datalist id="dataList">
 
-<head>
-    <title>book search</title>
-    <!-- <link href='font' rel='stylesheet' type='text/css'> -->
-    <link href="../../public/css/style.css" rel="stylesheet">
-</head>
+                    </datalist>
+                    <div class="buttonDiv">
+                    <button type="submit" id="show"  class="button">Search</button>
+                    </div>
+                    <ul id="unorderedList">
 
-<body>
-    <header>
-
-        <h1 class="title">Book Search</h1>
-    </header>
-    <main>
-        <div class="entry-container">
-            <form class="form" action="/create-post" method="post" id="the-form">
-                <h2 class="enterBook">Enter book name:</h2>
-                <input autocomplete="off" type="text" name="book-search" class="book-Search" id="bookSearch" list="dataList"></input>
-                <datalist id="dataList">
-
-                </datalist>
-                <button type="submit" class="button" id="button">Search</button>
-            </form>
-
+                    </ul>
+                </form>
+                <div id="recievedData">
+                   
+                </div>
+            </div>
             <div class="book-div"></div>
         </div>
     </main>
@@ -31,4 +37,3 @@
 </body>
 
 </html>
-_

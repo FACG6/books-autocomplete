@@ -1,15 +1,19 @@
 
-const fetchData = (method, search, cb) => {
+const fetchData = (method, search,url ,cb) => {
     const xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = () => {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
+                if(url=='/search'){
+                }
+                
+                
                 const response=JSON.parse(xhr.responseText);
                 cb(response);
             }
         }
     }
-    xhr.open(method, '/post');
+    xhr.open(method, url);
     xhr.send(search);
 }

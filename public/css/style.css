@@ -30,6 +30,8 @@ body {
 
 .form{
     text-align: center;
+    display: flex;
+    flex-direction: column;
    
    }
 .book-Search{
@@ -52,4 +54,18 @@ margin: 8px 10px;
         padding: 14px 20px;
         margin: 8px 0;
   }
- 
+ .form ul{
+    text-align: left;
+    list-style: none;
+    margin-left: 5vw;
+    font-size: 180%;
+    font-weight: bold;
+ } 
+ .form ul li{
+     margin-top: -1vh;
+ } 
+
+ .buttonDiv{
+
+    width: 23vw;
+ }

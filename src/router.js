@@ -10,15 +10,12 @@ const router = (request, response) => {
     const endpoint = request.url;
     if (endpoint === '/') {
         handleHome(request, response);
-    } 
-    else if (endpoint.includes('public')) {
-       staticHandler(request, response);
-    } 
-    else if (endpoint === '/post') {
-        console.log(1111111);
+    } else if (endpoint.includes('public')) {
+        staticHandler(request, response);
+    } else if (endpoint === '/post') {
 
         postHandler(request, response);
-    } else if (endpoint === '/create-post') {
+    } else if (endpoint === '/search') {
         createPostHandler(request, response);
     }
     else {
