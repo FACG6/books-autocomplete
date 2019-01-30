@@ -30,8 +30,6 @@ body {
 
 .form{
     text-align: center;
-    display: flex;
-    flex-direction: column;
    
    }
 .book-Search{
@@ -44,6 +42,7 @@ border-radius: 4px;
 box-sizing: border-box;
 padding: 12px 20px;
 margin: 8px 10px;
+width: 58vw;
 }
 
 .button{
@@ -68,4 +67,9 @@ margin: 8px 10px;
  .buttonDiv{
 
     width: 23vw;
+ }
+
+
+ #unorderedList{
+    word-wrap: break-word;
  }
