@@ -29,7 +29,6 @@ const staticHandler = (request, response) => {
     }
     const filePath = path.join(__dirname, '..', endpoint);
     const extension = endpoint.split('.')[1];
-    console.log(extension);
     fs.readFile(filePath, (error, file) => {
         if (error) {
             response.writeHead(404, { 'Content-Type': 'text/html' })
@@ -59,25 +58,22 @@ const postHandler = (request, response) => {
                 const jsonFile = JSON.parse(file);
                 let regex = new RegExp(convertedData.data, 'i');
                 const result = jsonFile.filter(item => regex.test(item));
-                console.log(result);
                 response.writeHead(200,{'Content-Type':'application/json'});
                 response.end(JSON.stringify(result));
 
             }
         })
 
-    //    response.end('');
     });
 }
 
 //create post form handler
 const createPostHandler = (request, response) => {
-    let allData = '';
+    let allData = 'data=';
     request.on('data', chunkOfData => {
         allData += chunkOfData;
     });
     request.on('end', () => {
-        response.writeHead(302, { 'Location': '/' });
         const convertedData = queryString.parse(allData);
         filePath = path.join(__dirname, '.', 'data.json');
         fs.readFile(filePath, (error, file) => {
@@ -86,19 +82,14 @@ const createPostHandler = (request, response) => {
                 response.end('<h2>Server Error</h2>');
             }
             else {
-
                 const jsonFile = JSON.parse(file);
-              
-                let regex = new RegExp(convertedData['book-search'], 'i');
-                const result=jsonFile.filter(item => regex.test(item));
-                console.log(result);
-                response.writeHead(302, { 'Content-type': 'text/html', 'Location': '/' });
+                let regex = new RegExp(convertedData['data'], 'i');
+                const result=jsonFile.filter(item => regex.test(item["title"]));
+                response.writeHead(200, {'Content-Type':'text/html','Location': '/' });
                 response.end(JSON.stringify(result));
-
             }
         })
 
-        // response.end('');
     });
 }
 module.exports = {
