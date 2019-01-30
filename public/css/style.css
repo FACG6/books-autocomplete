@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 20px auto;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 10px;
+    margin: 0;
+  padding: 0;
+  }
+.title{
+    font-family: Lobster;
+    text-shadow: -1px 0 #bd3838, 4px 2px rgba(132, 49, 49, 0.2);
+    width: 100%;
+    text-align: center;
+    font-size: -webkit-xxx-large;
+}
+.enterBook{
+    font-family: Lobster;
+    text-shadow: -1px 0 #bd3838, 4px 2px rgba(132, 49, 49, 0.2);
+    width: 100%;
+    text-align: center;
+    color: #a26ba5;
+    font-size: -webkit-xxx-large;
+}
+
+
+ 
+
+.form{
+    text-align: center;
+   
+   }
+.book-Search{
+  outline: none;
+color:black;
+font-size: 1.8rem;
+line-height: 2.4rem;
+border: 4px solid plum;
+border-radius: 4px;
+box-sizing: border-box;
+padding: 12px 20px;
+margin: 8px 10px;
+}
+
+.button{
+        display:inline-block;
+        background: plum;
+        color:black;
+        font-size: 1.8rem;
+        padding: 14px 20px;
+        margin: 8px 0;
+  }
+ 
