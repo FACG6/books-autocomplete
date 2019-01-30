@@ -88,8 +88,9 @@ const createPostHandler = (request, response) => {
             else {
 
                 const jsonFile = JSON.parse(file);
-                let result = [];
-                result.push(jsonFile.filter(item => item['title'].includes(convertedData['book-search'])));
+              
+                let regex = new RegExp(convertedData['book-search'], 'i');
+                const result=jsonFile.filter(item => regex.test(item));
                 console.log(result);
                 response.writeHead(200, { 'Content-type': 'text/html', 'Location': '/' });
                 response.end(JSON.stringify(result));
