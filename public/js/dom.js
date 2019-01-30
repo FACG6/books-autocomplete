@@ -21,12 +21,17 @@ show.addEventListener('click', (e) => {
     const recievedData = document.getElementById('recievedData');
     const array=[];
     unorderedList.innerHTML = "";
-    if (bookSearch.value != null) {
+    if(bookSearch.value.trim() == ''){
+        alert('Enter some value');
+    }
+    else if (bookSearch.value != null) {
         const searchFor=JSON.stringify(bookSearch.value);
         fetchData('POST',bookSearch.value,'/search', (response) => {
-          
-            
-            const parameter = document.createElement('div');
+            if(response == ''){
+                alert("no such value");
+            }
+            else{
+                const parameter = document.createElement('div');
             parameter.textContent=JSON.stringify(response[0]);
             for(let i in response[0] ){
                 console.log(i,546546546);
@@ -35,6 +40,8 @@ show.addEventListener('click', (e) => {
             console.log(li);
             unorderedList.appendChild(li);
             }
+            }
+            
         })
     };
 }
