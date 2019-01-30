@@ -12,14 +12,17 @@
         </header>
         <main>
             <div class="entry-container">
-                <form class="" action="/create-post" method="post" id="the-form">
+                <form class="" id="the-form">
                     <h2>Enter book name:</h2>
                     <input autocomplete="off" type="text" name="book-search" id="bookSearch"  list="dataList"></input>
                     <datalist id="dataList">
 
                     </datalist>
-                    <button type="submit">Search</button>
+                    <button type="submit" id="show">Search</button>
                 </form>
+                <div id="recievedData">
+
+                </div>
 
             <div class="book-div"></div>
         </main>
