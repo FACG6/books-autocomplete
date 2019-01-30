@@ -17,14 +17,24 @@ bookSearch.addEventListener('input', (e) => {
 let show = document.querySelector('#show');
 show.addEventListener('click', (e) => {
     e.preventDefault();
+    let unorderedList = document.getElementById("unorderedList");
+    const recievedData = document.getElementById('recievedData');
+    const array=[];
+    unorderedList.innerHTML = "";
     if (bookSearch.value != null) {
         const searchFor=JSON.stringify(bookSearch.value);
         fetchData('POST',bookSearch.value,'/search', (response) => {
-          const recievedData = document.getElementById('recievedData');
+          
             
             const parameter = document.createElement('div');
             parameter.textContent=JSON.stringify(response[0]);
-            recievedData.appendChild(parameter);
+            for(let i in response[0] ){
+                console.log(i,546546546);
+            let li = document.createElement('li');
+            li.innerHTML = i + ':' + response[0][i];
+            console.log(li);
+            unorderedList.appendChild(li);
+            }
         })
     };
 }
