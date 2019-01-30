@@ -7,7 +7,7 @@ const handleHome = (request, response) => {
     fs.readFile(filePath, (error, file) => {
         if (error) {
             response.writeHead(500, { 'Content-Type': 'text/html' });
-            response.end('<h2>Server internal error !!!!!</h2>')
+            response.end('<h2>Segit rver internal error !!!!!</h2>')
         }
         else {
 
@@ -90,10 +90,11 @@ const createPostHandler = (request, response) => {
             else {
 
                 const jsonFile = JSON.parse(file);
-                let result = [];
-                result.push(jsonFile.filter(item => item['title'].includes(convertedData['book-search'])));
+              
+                let regex = new RegExp(convertedData['book-search'], 'i');
+                const result=jsonFile.filter(item => regex.test(item));
                 console.log(result);
-                response.writeHead(200, { 'Content-type': 'text/html', 'Location': '/' });
+                response.writeHead(302, { 'Content-type': 'text/html', 'Location': '/' });
                 response.end(JSON.stringify(result));
 
             }

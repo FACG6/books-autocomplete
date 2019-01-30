@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <title>book search</title>
-        <link href='font' rel='stylesheet' type='text/css'>
-        <link href="./public/style.css" rel="stylesheet">
+        <!-- <link href='font' rel='stylesheet' type='text/css'> -->
+        <link href="../../public/css/style.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -14,13 +14,17 @@
             <div class="entry-container">
                 <form class="" action="/create-post" method="post" id="the-form">
                     <h2>Enter book name:</h2>
-                    <input type="text" name="book-search"></input>
+                    <input autocomplete="off" type="text" name="book-search" id="bookSearch"  list="dataList"></input>
+                    <datalist id="dataList">
+
+                    </datalist>
                     <button type="submit">Search</button>
                 </form>
 
             <div class="book-div"></div>
         </main>
-        <script src="./src/server.js"></script>
+        <script src="../../public/js/logic.js"></script>
+        <script src="../../public/js/dom.js"></script>
     </body>
 </html>
 _
