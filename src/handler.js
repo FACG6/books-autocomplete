@@ -28,13 +28,15 @@ const staticHandler = (request, response) => {
         png: 'image/png'
     }
     const filePath = path.join(__dirname, '..', endpoint);
+    console.log(filePath)
     const extension = endpoint.split('.')[1];
     fs.readFile(filePath, (error, file) => {
         if (error) {
             response.writeHead(404, { 'Content-Type': 'text/html' })
-            response.end('<h2>Server Error</h2>');
+            response.end('<h2>Page Not Found</h2>');
         }
         else {
+            console.log(extension)
             response.writeHead(200, { 'Content-Type': contentType[extension] });
             response.end(file);
         }

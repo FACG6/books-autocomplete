@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>book search</title>
+        <title> book search</title>
         <!-- <link href='font' rel='stylesheet' type='text/css'> -->
         <link href="../../public/css/style.css" rel="stylesheet">
     </head>
@@ -12,23 +12,28 @@
         </header>
         <main>
             <div class="entry-container">
-                <form class="" id="the-form">
-                    <h2>Enter book name:</h2>
-                    <input autocomplete="off" type="text" name="book-search" id="bookSearch"  list="dataList"></input>
+                <form class="form" id="the-form">
+                    <h2 class="enterBook">Enter book name:</h2>
+                    <input autocomplete="off" type="text" name="book-search" id="bookSearch"  list="dataList" class="book-Search"></input>
                     <datalist id="dataList">
 
                     </datalist>
-                    <button type="submit" id="show">Search</button>
-                </form>
-                <div id="recievedData">
+                    <div class="buttonDiv">
+                    <button type="submit" id="show"  class="button">Search</button>
+                    </div>
                     <ul id="unorderedList">
 
                     </ul>
+                </form>
+                <div id="recievedData">
+                   
                 </div>
             </div>
             <div class="book-div"></div>
-        </main>
-        <script src="../../public/js/logic.js"></script>
-        <script src="../../public/js/dom.js"></script>
-    </body>
+        </div>
+    </main>
+    <script src="../../public/js/logic.js"></script>
+    <script src="../../public/js/dom.js"></script>
+</body>
+
 </html>
