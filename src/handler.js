@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const queryString = require('querystring');
+
 const handleHome = (request, response) => {
     const endpoint = request.url;
     const filePath = path.join(__dirname, '..', 'public', 'html', 'index.html');
@@ -28,7 +29,6 @@ const staticHandler = (request, response) => {
         png: 'image/png'
     }
     const filePath = path.join(__dirname, '..', endpoint);
-    console.log(filePath)
     const extension = endpoint.split('.')[1];
     fs.readFile(filePath, (error, file) => {
         if (error) {
@@ -36,7 +36,6 @@ const staticHandler = (request, response) => {
             response.end('<h2>Page Not Found</h2>');
         }
         else {
-            console.log(extension)
             response.writeHead(200, { 'Content-Type': contentType[extension] });
             response.end(file);
         }

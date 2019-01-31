@@ -65,8 +65,7 @@ width: 58vw;
  } 
 
  .buttonDiv{
-
-    width: 23vw;
+    display: inline;
  }
 
 

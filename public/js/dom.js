@@ -34,10 +34,8 @@ show.addEventListener('click', (e) => {
                 const parameter = document.createElement('div');
             parameter.textContent=JSON.stringify(response[0]);
             for(let i in response[0] ){
-                console.log(i,546546546);
             let li = document.createElement('li');
             li.innerHTML = i + ' : ' + response[0][i];
-            console.log(li);
             unorderedList.appendChild(li);
             }
             }
